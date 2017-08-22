@@ -1,0 +1,63 @@
+  {if $user}
+<div id="main-menu-wrapper" class="clearfix">
+    <ul id="main-menu" class="fl">
+        <li><a href="{$basedomain}home">Home</a></li>
+		{*}
+	   <li><a href="{$basedomain}pursuit/join">The Pursuit</a>
+        	<ul>
+            	<li><a href="{$basedomain}inputcode">Input Code</a></li>
+            	<li><a href="{$basedomain}mscape">Grand Prize</a></li>
+       			<li><a href="{$basedomain}dyo">Dyo Shirt</a></li>
+            	<li><a href="{$basedomain}thisorthat">This Or That</a></li>
+            	<li><a href="{$basedomain}games">Web Games</a></li>
+            </ul>
+        </li>
+		{/*}
+		<li><a href="{$basedomain}games">Web Games</a></li>
+        <li><a href="{$basedomain}thisorthat">This Or That</a></li>    
+        <li><a href="{$basedomain}news/landing">News/Events</a></li>
+        <li><a href="{$basedomain}account">My Account</a></li>	
+        {*}<li class="welcome"><a href="{$basedomain}account">Hello, {$user->name} {$user->last_name} </a></li>{/*}
+        <li class="logout"><a href="{$basedomain}logout.php">Log Out</a></li>	
+        <li class="logout userpoint"><a href="javascript:void(0)">{$userpoint} PTS</a></li>	
+
+        <li class="logout " >
+			<div class="startpageinbox" page='0' total="" lastpage="0"></div>
+	         <div class="" >
+                <div class="title ">
+                    <h4><a href="#popup-inbox-new" class="theIcon icon-envelope showPopup"  id="inboxcounting" prop="{$usermessage}"><span class='count-inbox' >{$usermessage}</span></a></h4>
+                    <!--<h4><a href="#popup-inbox" class="theIcon icon-envelope showPopup"  id="inboxcounting" prop="{$usermessage}"><span class='count-inbox' >{$usermessage}</span></a></h4>-->
+                </div>
+            </div><!-- END .toggle -->
+			
+        </li>
+        {*}
+        <li class="logout " >
+			<div class="startpageinbox1" page='0' total="" lastpage="0"></div>
+	         <div class="" >
+                <div class="title ">
+                    <h4><a href="#popup-inbox-new-sample" class="theIcon icon-envelope showPopup"  id="inboxcounting1" ><span class='count-inbox' ></span></a></h4>
+                </div>
+            </div><!-- END .toggle -->
+			
+        </li>
+        {/*}
+
+    </ul>
+</div><!-- END .main-menu-wrapper -->
+{else}
+
+	{if $acts != 'trackingcode' && $pages != 'forgotpassword' }
+	<div class="rowBtn">
+			<div class="chooseBtn">
+				<a class="loginBtn {if $pages=='login'}active{/if}" href="{$basedomain}">LOG IN</a>
+				<a class="registerBtn {if $pages=='register'}active{/if}" href="{$basedomain}register">Register</a>
+			</div>
+			<p>click to choose</p>
+	</div><!-- END .rowBtn -->
+	<!--Header, Navigasi page-->
+	
+	
+	{/if}
+{/if}
+{include file="application/web/widgets/popup-inbox-new.html"}

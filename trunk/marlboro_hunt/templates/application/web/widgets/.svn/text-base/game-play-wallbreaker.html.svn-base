@@ -1,0 +1,22 @@
+<div id="gamesPage">
+	<div class="gamesPage" id="gamesPageDetail">
+        <ul class="columns-2 clearfix">
+            <li class="col2" id="wallbrakergames">
+            	<div class="theGame wallbrakergames">
+                	<div class="wallbrakergame">
+						<embed src="{$basedomain}assets/games/wallbreaker/MarlboroWB.swf" wmode="transparent" style="" width="652px" height="675px" >
+						</embed>
+                    </div>
+                </div><!-- END .theGame -->
+            </li>
+            <li class="col2" style="width:200px !important;">
+            	<div class="gameDesc2">
+                    <a class="btn_red showPopup" href="#popup-leaderboard" style="width:160px; font-size:23px; padding:0;">LEADERBOARD</a>
+                    <a class="btn_red showPopup" href="#popup-full-mechanics-wallbraker" style="width:160px; font-size:23px; padding:0;">FULL MECHANICS</a>
+                </div><!-- END .gameDesc -->
+            </li>
+        </ul>
+    </div><!-- END .gamesPage -->
+</div><!-- END #gamesPage -->
+{include file="application/web/widgets/popup_leaderboard_wallbraker.html"}
+{include file="application/web/widgets/popup-full-mechanics-wallbraker.html"}

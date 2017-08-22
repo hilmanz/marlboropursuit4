@@ -1,0 +1,307 @@
+<div class="section">
+	<div class="the-title fl">
+        <h2>Web Activities</h2>
+    </div>
+	<form method="GET" action="">
+    <div class="menu_charts">
+            <input type="text"  id="from" name="startdate" value="{$startdate}" ><span>-</span>
+            <input type="text"  id="to" name="enddate" value="{$enddate}" /><a href="javascript:void(0)" class="calendar"></a>
+    </div>
+	</form>
+    <div class="boxBig">
+    	<div class="title_box">
+            <div class="the-title fl">
+                <h2>Top 10 Visited Page</h2>
+            </div>
+         </div>
+        <div class="chart-section" id="topvisited">
+			<!-- <img src="{$assets_domain}images/charts.jpg"> -->
+        </div>
+     </div><!--end.boxBig-->
+     <div class="the-title fl">
+        <h2>Number of Activities History</h2>
+    </div>
+<div>    
+     <div class="boxBig-2">
+         <div class="summary-redeem">	
+			<div class="summary_box-5 center_box">
+				<div class="summary_center">
+					<div class="summary_stats">
+					<h1 class="brown">{$joinPursuitAct.num}</h1>
+						<h4>{$joinPursuitAct.action_value}</h4>
+					</div>
+				</div>
+			</div><!--end.summary_box-->  		 
+            <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$gamePursuit[0].num}</h1>
+                        <h4>{$gamePursuit[0].action_value}</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			  <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$gamePursuit[1].num}</h1>
+                        <h4>{$gamePursuit[1].action_value}</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->  
+			<div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$gamePursuit[2].num}</h1>
+                        <h4>{$gamePursuit[2].action_value}</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->  <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$tradePursuit.num}</h1>
+                        <h4>Trade</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			 <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$redeemMerchandiseAct.num}</h1>
+                        <h4>Redeem Merchandise</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			 <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$thisorthatact.num}</h1>
+                        <h4>This or That</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			 <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$newsAct.num}</h1>
+                        <h4>News</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			 <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$eventAct.num}</h1>
+                        <h4>Event</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+			 <div class="summary_box-5 center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$myAccountact.num}</h1>
+                        <h4>MyAccount</h4>
+                    </div>
+                </div>
+            </div><!--end.summary_box-->
+        </div>
+     </div><!--end.boxBig-->
+	 
+	 
+	     <div class="boxBig">
+    	<div class="title_box">
+            <div class="the-title fl">
+                <h2>WEEKLY REPORT</h2>
+            </div>
+			<div class="the-title fr">
+                 <h2><a href="{$basedomain}web_activities/downloadreport/{$startdate}/{$enddate}" style=" float:right;position:relative">[ download report ]</a></h2>
+            </div>
+         </div>
+       <table class="gridtable">
+			<tr>
+			<td>ACTIVITY</td> 
+			{foreach from=$weeklyreport.login.total key=k item=v}				
+                <td>{$v.dd}</td>			
+			{/foreach}
+			</tr>
+			
+			
+			<tr><td>LOGIN</td></tr>
+			<tr>				
+				<td>TOTAL</td>
+			{foreach from=$weeklyreport.login.total key=k item=v}				
+                <td>{$v.total}</td>			
+			{/foreach}
+			</tr>
+			<tr>
+				<td>UNIQUE</td>
+			{foreach from=$weeklyreport.login.unique key=k item=v}				
+                <td>{$v.total}</td>			
+			{/foreach}
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			<tr><td>GAMES</td></tr>
+			
+			{foreach from=$weeklyreport.games key=k item=v}				
+               	<tr>
+				<td>TOTAL {if $k==1}CROSS OUT{/if} {if $k==2}WALL BREAKER{/if}{if $k==3}HIDDEN MARLBORO{/if}{if $k==4}DOUBT CRASHER{/if} {if $k==5}WORD HUNT{/if} </td>
+                {foreach from=$v.total key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>						
+			{/foreach}
+		
+			
+			{foreach from=$weeklyreport.games key=k item=v}				
+                 	<tr>
+				<td>UNIQUE {if $k==1}CROSS OUT{/if} {if $k==2}WALL BREAKER{/if}{if $k==3}HIDDEN MARLBORO{/if}{if $k==4}DOUBT CRASHER{/if} {if $k==5}WORD HUNT{/if}   </td>
+                {foreach from=$v.unique key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>			
+			{/foreach}
+		
+			
+			
+			<tr><td>&nbsp;</td></tr>
+			{*}
+			<tr><td>THIS OR THAT</td></tr>
+		
+			{foreach from=$weeklyreport.thisorthat key=k item=v}
+				<tr>
+				<td>TOTAL {$k}</td>
+                {foreach from=$v.total key=key item=val}
+				<td>{$val.total}</td>	
+				{/foreach}
+				</tr>				
+			{/foreach}
+		
+			{foreach from=$weeklyreport.thisorthat key=k item=v}				
+               <tr>
+				<td>UNIQUE {$k}</td>
+                {foreach from=$v.unique key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>				
+			{/foreach}
+		
+			
+			<tr><td>&nbsp;</td></tr>
+			{/*}
+			<tr><td>VIDEO</td></tr>
+		
+			{foreach from=$weeklyreport.video key=k item=v}				
+               <tr>
+				<td>TOTAL {$k}</td>
+                {foreach from=$v.total key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>				
+			{/foreach}
+			
+			{foreach from=$weeklyreport.video key=k item=v}				
+                <tr>
+				<td>UNIQUE {$k}</td>
+                {foreach from=$v.unique key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>			
+			{/foreach}
+			
+			
+				
+			<tr><td>&nbsp;</td></tr>
+			<tr><td>PAGES</td></tr>
+			{foreach from=$weeklyreport.pages key=k item=v}				
+                <tr>
+				<td>TOTAL {$k}</td>
+                {foreach from=$v.total key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>				
+			{/foreach}
+		
+			{foreach from=$weeklyreport.pages key=k item=v}				
+                 <tr>
+				<td>UNIQUE {$k}</td>
+                {foreach from=$v.unique key=key item=val}
+				<td>{$val.total}</td>		
+				{/foreach}
+				</tr>					
+			{/foreach}
+		
+			
+          </table>
+     </div><!--end.boxBig-->
+	
+	<div class="boxBig">
+    	<div class="title_box">
+            <div class="the-title fl">
+                <h2>THIS OR THAT</h2>
+            </div>
+         </div>
+        <div class="chart-section" id="">
+			<table class="gridthisorthat">
+				<tr>
+					<th>Weeks Period</th>
+					<th>Themes</th>
+					<th>Total Submission</th>
+					<th>Unique User</th>
+				</tr>
+				{foreach from=$thisorthatsubmission key=k item=v}			
+				<tr>
+					<td rowspan="2">{$v.change_create_date} - {$v.change_due_date}</td>
+					
+					<td>{$v.submission[0].eventName}</td>
+					
+					
+					<td>{$v.submission[0].total}</td>
+					<td>{$v.submission[0].unique}</td>
+				</tr>
+				<tr>
+					
+					<td>{$v.submission[1].eventName}</td>
+					<td>{$v.submission[1].total}</td>
+					<td>{$v.submission[1].unique}</td>
+				</tr>
+				{/foreach}
+			</table>
+			<!-- <img src="{$assets_domain}images/charts.jpg"> -->
+        </div>
+     </div><!--end.boxBig-->
+	 
+</div><!--end.section-->
+
+<script type="text/javascript">
+	var top10visitedPage = {$top10visitedPage|@json_encode};	
+	//console.log(top10visitedPage);
+{literal}	
+$(function () {
+
+	var visitedData = new Array();
+	var visitedDate = new Array();	
+	
+	for (var visitedPage in top10visitedPage){
+		visitedData.push(parseInt(top10visitedPage[visitedPage].num));
+		visitedDate.push(String(top10visitedPage[visitedPage].action_value));
+	}
+			
+	gethighChart('column','test  Chart','topvisited',visitedData,visitedDate,1,true);
+	
+	//drillDownChart('column','test Chart','cont',dataCoba,cateActivityGroup,1 ,false);
+	});
+	
+	
+	
+	$(document).on('click','.calendar', function(){
+		
+		var from = $('#from').val();
+		var to = $('#to').val();
+		
+		window.location.href='?startdate='+from+'&enddate='+to;
+	
+	})
+	
+		
+</script>
+{/literal}

@@ -1,0 +1,24 @@
+<div id="landing-page" class="section2">
+	<div class="landing-page">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="sideBar">
+                    <div class="entry landingEntry">
+                    	<h2>in making life decisions, Only two options can <br />move
+                        	you forward - Yes or No. <span class="red">Maybe</span> never can</h2>
+                    </div><!-- END .entry -->
+                    <div class="be-marlboro2"></div>
+                    <a href="{$basedomain}news/landing" class="readmore rblack">Back</a>
+                </div><!-- END .sideBar -->
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="section-detail">
+                    <ul class="columns-2 clearfix">						
+						{$news_list}
+						{$news_detail}						
+                    </ul><!-- END .columns-2 -->
+                </div><!-- END .section-detail -->
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .landingPage -->
+</div><!-- END #landingPage -->

@@ -1,0 +1,48 @@
+<div id="landing-page" class="section2">
+	<div class="landing-page">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="sideBar">
+                    <div class="entry landingEntry">
+                    	<h2 style="color:#fff;">WE'RE ALMOST THERE! SOMETHING EXCITING WILL<br /> BE REVEALED ON THE SITE. SOON</h2>
+                    </div><!-- END .entry -->
+                    <div class="be-marlboro2"></div>
+                </div><!-- END .sideBar -->
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="centerButton" id="lineHOme3">
+                <h2>Ready to Earn Points?</h2>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            	<a id="yes_bt" class="whiteBtns" href="{$basedomain}pursuit/learnMore">Yes</a>
+            	<a id="no_bt" class="whiteBtnsNo" href="#">No</a>
+                </div>
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .landingPage -->
+</div><!-- END #landingPage -->
+{literal}
+<script>
+/*
+$( document ).ready(function() {
+						
+	$("#no_bt").click(function(){
+	$(this).animate({"left": "+=1000px"},"slow");
+	});
+	
+});
+{/literal}
+*/
+{literal}
+$( document ).ready(function() {
+						
+	$('#no_bt').click(function() {
+		$('#no_bt').animate({ bottom: '-1000px', }, 500, function() {
+			window.location.pathname = '/news'; 												 	
+		});
+		$('.line2').animate({ top: '2000px', }, 500);
+	});
+	
+});
+{/literal}
+</script>

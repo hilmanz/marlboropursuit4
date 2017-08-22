@@ -1,0 +1,22 @@
+<li class="col2">
+<form method="GET" action="">
+	<div class="widget-container news-widget">
+		<div class="widget-title">
+			<h3>News</h3>
+		</div><!-- END .widget-title -->
+		<div class="widget-content">
+			{if $newsList}
+			<ul class="tr-list">
+				{foreach from=$newsList key=k item=v}
+				<li class="row">
+					<h6 class="date">{$v.datachange}</h6>
+					<h3 class="title">{$v.title}</h3>
+					<p><a class="readfull" href="{$basedomain}news/detail/{$v.id}" >Read Full Article</a></p>
+				</li><!-- END .row -->
+				{/foreach}
+			</ul><!-- END .tr-list -->
+			{/if}
+		</div><!-- END .widget-content -->
+	</div><!-- END .widget-container -->
+</form>
+</li><!-- END .col2 -->

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/marlboro-hunt-2013/!svn/ver/1453/trunk/marlboro_hunt/templates/application/dashboard/apps
+END
+web_activities_report.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/marlboro-hunt-2013/!svn/ver/1448/trunk/marlboro_hunt/templates/application/dashboard/apps/web_activities_report.html
+END
+user.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-hunt-2013/!svn/ver/435/trunk/marlboro_hunt/templates/application/dashboard/apps/user.html
+END
+google_analytic.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-hunt-2013/!svn/ver/1453/trunk/marlboro_hunt/templates/application/dashboard/apps/google_analytic.html
+END
+user_demographic.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/marlboro-hunt-2013/!svn/ver/1247/trunk/marlboro_hunt/templates/application/dashboard/apps/user_demographic.html
+END
+web_activities.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/marlboro-hunt-2013/!svn/ver/1446/trunk/marlboro_hunt/templates/application/dashboard/apps/web_activities.html
+END
+task.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-hunt-2013/!svn/ver/1410/trunk/marlboro_hunt/templates/application/dashboard/apps/task.html
+END
+user_activities.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/marlboro-hunt-2013/!svn/ver/1371/trunk/marlboro_hunt/templates/application/dashboard/apps/user_activities.html
+END
+redeem_merchandise.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/marlboro-hunt-2013/!svn/ver/1349/trunk/marlboro_hunt/templates/application/dashboard/apps/redeem_merchandise.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-hunt-2013/!svn/ver/1089/trunk/marlboro_hunt/templates/application/dashboard/apps/home.html
+END
+user_registration_method.html
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/marlboro-hunt-2013/!svn/ver/1209/trunk/marlboro_hunt/templates/application/dashboard/apps/user_registration_method.html
+END
+letter_and_trading.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/marlboro-hunt-2013/!svn/ver/1429/trunk/marlboro_hunt/templates/application/dashboard/apps/letter_and_trading.html
+END
+demographic_data.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/marlboro-hunt-2013/!svn/ver/1295/trunk/marlboro_hunt/templates/application/dashboard/apps/demographic_data.html
+END

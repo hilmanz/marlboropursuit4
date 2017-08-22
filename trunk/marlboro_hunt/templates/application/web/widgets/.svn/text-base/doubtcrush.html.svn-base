@@ -1,0 +1,45 @@
+<div id="gamesPage">
+	<div class="gamesPage" id="gamesPageDetail">
+        <ul class="columns-2 clearfix">
+            <li class="col2">
+            	<div class="thumbGameBig">
+					<a href="javascript:void(0)" class="checkFlash"><img src="{$basedomain}assets/content/game4.jpg" /></a>
+                </div><!-- END .boxPaper -->
+            </li>
+            <li class="col2">
+            	<div class="gameDesc">
+                    <h1>DOUBT CRASHER</h1>
+                    <h4> Pursue your dream without a doubt. 
+Keep moving forward and smash every "maybe" that gets in your way. 
+Make it come true, right here, right now</h4><br /><br />
+                    <!--<a class="btn_red" href="{$basedomain}games/play/doubtcrush">PLAY NOW</a>-->
+                    <a class="btn_red checkFlash" href="javascript:void(0)">PLAY NOW</a>
+                    <a class="btn_red showPopup" href="#popup-leaderboard">LEADERBOARD</a>
+                </div><!-- END .gameDesc -->
+            </li>
+        </ul>
+    </div><!-- END .gamesPage -->
+</div><!-- END #gamesPage -->
+{include file="application/web/widgets/popup_leaderboard_doubtcrush.html"}
+
+<script>
+	{literal}
+	
+	$(document).on('click', '.checkFlash', function(){
+		var version = getFlashVersion().split(',').shift();
+		var html ="";
+		if(version < 11){
+		 
+			html += locale.flashplayerrequired;
+			$(".contentmyaccount").html(html);
+			$(".my-account-profile").trigger("click");
+			//$(".confirmTitle").html('Flash Player');
+			
+		}else{
+			window.location.href=basedomain+'games/play/doubtcrasher';
+			
+		}
+	})
+	
+	{/literal}
+</script>

@@ -1,0 +1,45 @@
+<div id="header">
+	<div class="universal">
+          {if $user}
+        <a id="logo" href="{$basedomain}home">&nbsp;</a>
+        <div id="main-menu-wrapper" class="clearfix active-{$pages}">
+            <ul id="main-menu" class="mainmenu">
+                <li class="navhome"><a href="{$basedomain}home">Home</a></li>
+                <li class="navgame"><a href="{$basedomain}games">Web Games</a></li>
+                <li class="navnews"><a href="{$basedomain}news/landing">News&amp;Events</a></li>
+                <li class="navmove"><a href="{$basedomain}movefwd">Move FWD</a></li>  
+                <li class="navliveit"><a href="{$basedomain}liveitup">Live It Up</a></li>    
+                <li class="navaccount"><a href="{$basedomain}account">My Account</a></li>	
+            </ul>
+            <ul id="main-menu2" class="mainmenu">	
+                <li class="userpoint"><a href="javascript:void(0)">POINTS: <span>{$userpoint}</span></a></li>	
+                <li class="notif">
+                    <div class="startpageinbox" page='0' total="" lastpage="0"></div>
+                     <div class="" >
+                        <div class="title ">
+                            <h4><a href="#popup-inbox-new" class="showPopup"  id="inboxcounting" prop="{$usermessage}">Notification <span class='count-inbox' >{$usermessage}</span></a></h4>
+                        </div>
+                    </div><!-- END .toggle -->
+                    
+                </li>
+                <li class="newsfeed"><a href="#newsfeed" class="getfeed">News Feed</a></li>    
+                <li class="logout"><a href="{$basedomain}logout.php">Log Out</a></li>
+            </ul>
+        </div><!-- END .main-menu-wrapper -->
+        {else}
+        
+            {if $acts != 'trackingcode' && $pages != 'forgotpassword' }
+            <div class="rowBtn">
+                    <div class="chooseBtn">
+                        <a class="loginBtn {if $pages=='login'}active{/if}" href="{$basedomain}">LOG IN</a>
+                        <a class="registerBtn {if $pages=='register'}active{/if}" href="{$basedomain}register">Register</a>
+                    </div>
+            </div><!-- END .rowBtn -->
+            <!--Header, Navigasi page-->
+            
+            
+            {/if}
+        {/if}<!-- END #header -->
+    </div>
+</div>
+{include file="application/web/widgets/popup-inbox-new.html"}

@@ -1,0 +1,57 @@
+
+<div id="landing-page" class="section2">
+	<div class="landing-page">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="sideBar">
+                    <div class="entry landingEntry">
+                    	<h2>in making life decisions, Only two options can <br />move
+                        	you forward - Yes or No. <span class="red">Maybe</span> never can</h2>
+                    </div><!-- END .entry -->
+                    <div class="be-marlboro2"></div>
+                    {*}<a href="{$basedomain}news" class="readmore rblack">Back</a>{/*}
+                    </div><!-- END .sideBar -->
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="section-landing">
+                    <ul class="columns-3 clearfix">
+                        <li class="col3">
+                            <div class="box">
+                                <div class="title-box"><h3><a href="{$basedomain}news/detail/" class="bg_white">News</a></h3></div>
+                                <div class="thumbLanding">
+                                    <a class="thumb200" href="{$basedomain}news/detail/">
+                                        <img src="{$basedomain}assets/content/thumb_news1.jpg" />
+                                    </a>
+                                </div><!-- END .thumbLanding -->
+                            </div><!-- END .box -->
+                        </li><!-- END .col3 -->
+                        <li class="col3">
+                            <div class="box">
+                                <div class="title-box"><h3><a href="{$basedomain}event/past/" class="bg_red">Past Events</a></</a></h3></div>
+                                <div class="thumbLanding">
+                                    <a class="thumb200" href="{$basedomain}event/past/">
+                                        <img src="{$basedomain}assets/content/thumb_news2.jpg" />
+                                    </a>
+                                </div><!-- END .thumbLanding -->
+                            </div><!-- END .box -->
+                        </li><!-- END .col3 -->
+                        {*}
+                        <li class="col3">
+                       		 
+                            <div class="box">
+                                <div class="title-box"><h3><a href="{$basedomain}event/upcoming/" class="bg_red2">Upcoming Events</a></h3></div>
+                                <div class="thumbLanding">
+                                    <a class="thumb200" href="{$basedomain}event/upcoming/">
+                                        <img src="{$basedomain}assets/content/thumb_news3.jpg" />
+                                    </a>
+                                </div><!-- END .thumbLanding -->
+                            </div><!-- END .box -->
+                       	    
+                        </li><!-- END .col3 -->
+                        {/*}
+                    </ul><!-- END .columns-3 -->
+                </div><!-- END .section-landing -->
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .landingPage -->
+</div><!-- END #landingPage -->

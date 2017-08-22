@@ -1,0 +1,23 @@
+<div class="popup">
+	<div class="popupContainer popupContainer4" id="popup-replay-message">
+        <div class="popupContent">
+        	<div class="entry-popup popupInbox">
+            	
+                <div class="inner">
+                         <ul class="columns-2 clearfix">
+                         	<li class="inbox-widget">
+                            	
+                            </li><!-- END .inbox-widget -->
+                            <li class="col2 isi-inbox1">
+                            	
+                                  <div id="isi-message1 " class="replaymessagecontent">
+                                  		
+                                  </div><!-- END #isi-message-->
+								 
+                            </li><!-- END .columns-2 clearfix -->
+                         </ul><!-- END .columns-2 clearfix -->
+                </div><!-- END .inner -->
+            </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

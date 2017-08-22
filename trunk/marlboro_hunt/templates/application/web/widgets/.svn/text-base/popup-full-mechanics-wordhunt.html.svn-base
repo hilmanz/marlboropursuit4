@@ -1,0 +1,13 @@
+        
+<div class="popup">
+	<div class="popupContainer popupContainer4" id="popup-full-mechanics-wordhunt">
+        <div class="popupContents">
+        	<div class="popup-title">
+				<h1>HOW TO PLAY WORD HUNT</h1>
+            </div><!--END .entry-title-->
+        	<div class="entry-popup popupmechanicsGame">
+            	<img src="{$basedomain}assets/content/wordhunt_mechanic.png" />
+          </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

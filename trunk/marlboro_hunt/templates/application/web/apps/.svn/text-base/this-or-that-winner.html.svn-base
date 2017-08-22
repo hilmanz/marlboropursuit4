@@ -1,0 +1,79 @@
+<div id="thisorthatPage">
+	<div class="thisorthatPage">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="titlePaper">
+                    <h1><span class="red">THIS</span> <span class="black">OR</span> <span class="red">THAT</span></h1>
+                </div><!-- END .titlePaper -->
+                 <div class="sideBar">
+                    <div class="entry">
+                        <p>Every two weeks, we'll update this page with the best photo for the theme.
+Winning photos will get extra points from Marlboro</p>
+                         <a class="readmore rblack" href="{$basedomain}thisorthat/winner">See Past Winners</a>
+                    </div><!-- END .entry -->
+                    <div class="be-marlboro"></div>
+                </div><!-- END .sideBar -->
+            <li class="col-main">
+            	<div class="entry-detail bg_transparent">
+                    <h1 class="title-detail">Winner</h1>
+                    <div class="pagination" id="tabs">
+                    	<ul id="pageWinner">
+                            <li><a class="active" href="#round1">Round 1</a></li>
+                            <li><a href="#round2">Round 2</a></li>
+                            <li><a href="#round3">Round 3</a></li>
+                            <li><a href="#round4">Round 4</a></li>
+                        </ul>
+                        <div class="the-winner" id="round1">
+                            <div class="menu-thisWinner">
+                                <div class="menu-sun">
+                                    <a class="sun-menu_Active">SUN UP OR SUN DOWN</a>            
+                                </div>
+                                <a href="{$basedomain}thisorthat" class="bt_back">BACK</a>
+                            </div>
+                            <div class="img-winner">
+                                <img src="{$basedomain}assets/content/thisorthatwinner/JustinAndrewTiu.jpg" />
+                                <p class="winner-thisorthat"></p>
+                            </div>
+                        </div>
+                        <div class="the-winner" id="round2">
+                            <div class="menu-thisWinner">
+                                <div class="menu-sun">
+                                    <a class="sun-menu_Active">Stay In or Party Out</a>            
+                                </div>
+                                <a href="{$basedomain}thisorthat" class="bt_back">BACK</a>
+                            </div>
+                            <div class="img-winner">
+                                <img src="{$basedomain}assets/content/thisorthatwinner/MarkDonnValle.jpg" />
+                                <p class="winner-thisorthat"></p>
+                            </div>
+                        </div>
+                        <div class="the-winner" id="round3">
+                            <div class="menu-thisWinner">
+                                <div class="menu-sun">
+                                    <a class="sun-menu_Active">On Land or At Sea</a>            
+                                </div>
+                                <a href="{$basedomain}thisorthat" class="bt_back">BACK</a>
+                            </div>
+                            <div class="img-winner">
+                                <img src="{$basedomain}assets/content/thisorthatwinner/AdrianMArkLaw.jpg" />
+                                <p class="winner-thisorthat"></p>
+                            </div>
+                        </div>
+                        <div class="the-winner" id="round4">
+                            <div class="menu-thisWinner">
+                                <div class="menu-sun">
+                                    <a class="sun-menu_Active">Pose or Play</a>            
+                                </div>
+                                <a href="{$basedomain}thisorthat" class="bt_back">BACK</a>
+                            </div>
+                            <div class="img-winner">
+                                <img src="{$basedomain}assets/content/thisorthatwinner/ShayneSamonte.jpg" />
+                                <p class="winner-thisorthat"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- END .entry-detail -->
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .dyoshirtPages -->
+</div><!-- END #dyoshirtPages -->

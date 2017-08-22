@@ -1,0 +1,138 @@
+<div id="pursuitPage">
+	<div class="pursuitPage">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="titlePaper">
+                    <h1><span class="black">THE</span><span class="red">PURSUIT</span></h1>
+                </div><!-- END .titlePaper -->
+                <div class="sideBar">
+                	<div style="height:170px;">
+                    <div class="be-marlboro2"></div>
+                    </div>
+                    <div class="entry">
+                        <div class="row"><a class="readmore rblack" href="{$basedomain}pursuit/learnMore">Learn More</a></div>
+                        <div class="row"><a class="readmore rblack showPopup" href="#popup-full-mechanics-pursuit">Read Full Mechanics</a></div>
+                        <div class="row"><a class="readmore rblack" href="{$basedomain}pursuit/prize">What You Can Win</a></div>
+                        <div class="row"><a class="readmore rblack" href="{$basedomain}mscape">See The Grand Prize</a></div>
+                        <div class="row"><a class="readmore rblack redeemprize" href="javascript:void(0)">Redeem Prize</a></div>
+                    </div><!-- END .entry -->
+                </div><!-- END .sideBar -->
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="theContent" style="background:url({$basedomain}assets/images/tr4.png) repeat; overflow:hidden; position:relative; top:20px;">
+                		<h3>You can choose to cash in phrases you've completed for the prizes on this page. Or you can choose to complete the phrase <span class="red">"DON'T BE A MAYBE"</span> to win the graND prize. </h3>
+                        <div class="row">
+                        	<h1 class="red">"DON'T"</h1>
+                            {foreach from=$merchanDont key=k item=v}
+							<div class="boxPrize">
+                            	<a class="thumb-prize  redeemPrizeDont1" {*} prop="{$v.id}" filename="{$v.image}" {/*}>
+								<img class="merch_{$v.id} {if $v.stock <= 0}noneactive{/if} " src="{$basedomain}public_assets/merchandiseStock/{$v.image}" />
+								</a>
+                                <h6>{$v.detail} </h6> 
+									<div><h6><span class="thisstock_{$v.id}" >{$v.stock}</span>&nbsp;&nbsp;left </h6></div>
+								 
+                            </div><!-- END .boxPrize -->
+							{/foreach}
+                            <!--<div class="boxPrize">
+                            	<a href="#popup-redeem1" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize2.jpg" /></a>
+                                <h6>Limited Edition Marlboro Branded Ashtray</h6>
+                            </div><!-- END .boxPrize -->
+                        </div><!-- END .row -->
+                        <div class="row">
+                        	<h1 class="red">"DON'T BE"</h1>
+                            {foreach from=$merchanDontbe key=k item=v}
+							<div class="boxPrize">
+                            	<a class="thumb-prize redeemPrizeDontBe1" {*} prop="{$v.id}" filename="{$v.image}" {/*}>
+								<img  class="merch_{$v.id} {if $v.stock <= 0}noneactive{/if} " src="{$basedomain}public_assets/merchandiseStock/{$v.image}" />
+								</a>
+                                <h6>{$v.detail}</h6>
+                            	<div><h6><span class="thisstock_{$v.id}" >{$v.stock}</span>&nbsp;&nbsp;left </h6></div>
+                            </div><!-- END .boxPrize -->
+                            {/foreach}
+							<!--<div class="boxPrize">
+                            	<a href="#popup-redeem2" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize7.jpg" /></a>
+                                <h6>Limited Edition Marlboro Branded Rudy Project Shades</h6>
+                            </div><!-- END .boxPrize -->
+                            <!--<div class="boxPrize">
+                            	<a href="#popup-redeem2" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize8.jpg" /></a>
+                                <h6>Gift Certificate at Republik Wakepark </h6>
+                            </div><!-- END .boxPrize -->
+                        </div><!-- END .row -->
+                        <div class="row">
+                        	<h1 class="red">"DON'T BE A"</h1>
+                            {foreach from=$merchanDontbea key=k item=v}
+							<div class="boxPrize">
+                            	<a class="thumb-prize redeemPrizeDontBeA1" {*} prop="{$v.id}" filename="{$v.image}" {/*}>
+								<img  class="merch_{$v.id} {if $v.stock <= 0}noneactive{/if} " src="{$basedomain}public_assets/merchandiseStock/{$v.image}" />
+								</a>
+                                <h6>{$v.detail}  </h6>
+								<div><h6><span class="thisstock_{$v.id}" >{$v.stock}</span>&nbsp;&nbsp;left </h6></div>
+                            </div><!-- END .boxPrize -->
+                            {/foreach}
+							<!--<div class="boxPrize">
+                            	<a href="#popup-redeem3" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize11.jpg" /></a>
+                                <h6>Ferrari Headphones</h6>
+                            </div><!-- END .boxPrize -->
+                            <!--<div class="boxPrize">
+                            	<a href="#popup-redeem3" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize12.jpg" /></a>
+                                <h6>Cullinary Classes</h6>
+                            </div><!-- END .boxPrize -->
+                            <!--<div class="boxPrize">
+                            	<a href="#popup-redeem3" class="thumb-prize showPopup"><img src="{$basedomain}assets/content/thumb_prize13.jpg" /></a>
+                                <h6>Photography Classes</h6>
+                            </div><!-- END .boxPrize -->
+                        </div><!-- END .row -->
+                       <div class="row">
+                       	 <a class="readmore fl" href="{$basedomain}mscape">"DON'T BE A MAYBE"</a>
+                       	<!-- <a class="whiteBtn fr" href="" onclick =" window.history.back();">GO BACK</a> -->
+                       </div>
+                </div><!-- END .theContent -->
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .dyoshirtPages -->
+</div><!-- END #dyoshirtPages -->
+{$popup_redeem_1}
+{$popup_redeem_2}
+{$popup_redeem_3}
+{$popup_redeem_claim}
+{include file="application/web/widgets/popup-full-mechanics-pursuit.html"}
+
+{include file="application/web/widgets/popup_redeem_4.html"}
+{include file="application/web/widgets/popup_redeem_3.html"}
+{include file="application/web/widgets/popup_redeem_2.html"}
+{include file="application/web/widgets/popup_redeem_1.html"}
+{include file="application/web/widgets/popup_redeem_claim.html"}
+
+<div style='display:none'>
+{foreach from=$merchanDont key=k item=v}
+<a class="thumb-prize redeemPrizeDont"  prop="{$v.id}" filename="{$v.image}" ></a>
+{/foreach}
+{foreach from=$merchanDontbe key=k item=v}
+<a class="thumb-prize redeemPrizeDontBe" prop="{$v.id}" filename="{$v.image}"></a>
+{/foreach}
+{foreach from=$merchanDontbea key=k item=v}
+<a class="thumb-prize redeemPrizeDontBeA"  prop="{$v.id}" filename="{$v.image}"></a>
+{/foreach}
+</div>
+<script  type="text/javascript" src="{$basedomain}assets/js/helper/pursuitjoin.js"></script>
+
+
+{literal}
+	<script>
+		$(document).ready(function(){ merchsync = setTimeout(getmerchstock, 1000); });
+		function getmerchstock(){
+				$.post(basedomain+'pursuit/ajaxPrizeRedeem',function(data){
+					if(data){
+						$.each(data,function(e,i){
+							$(".thisstock_"+e).html(i);
+							if(i<=0)$('.merch_'+e).addClass('noneactive');
+							if(i>0)$('.merch_'+e).removeClass('noneactive');
+						})	
+							
+						merchsync = setTimeout(getmerchstock, 10000);
+					}
+			},"JSON");	
+		}
+			
+	</script>
+{/literal}

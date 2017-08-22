@@ -1,0 +1,71 @@
+<div id="thisorthatPage" class="thisthatPage">
+	<div class="thisorthatPage">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="titlePaper">
+                    <h1><span class="red">THIS</span> <span class="black">OR</span> <span class="red">THAT</span></h1>
+                </div><!-- END .titlePaper -->
+                <div class="sideBar">
+                    <div class="be-marlboro2"></div>
+                </div><!-- END .sideBar -->
+				<div class="row thisorthatEntry" >
+				<h6>A DECISION IS MADE WHEN YOU ACT UPON IT. PICK ONE OF THE TASK, TAKE A PHOTO OF YOURSELF DOING IT, AND UPLOAD IT HERE. EACH APPROVED PHOTOS GIVES YOU TWO POINTS.</h6>
+				<a class="readmore rblack" href="{$basedomain}thisorthat/winner">See Past Winners</a>
+				</div>
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="centerButton">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+
+				{if $eventdata}
+              	  <h1>MAKE A DECISION</h1>
+
+                    <ul class="columns-3 clearfix">
+                        <li class="col3">
+                            <a class="whiteBtns showPopup condition" href="#popup-pose-image-upload"  condition='{$conditional[0].button}' >{$conditional[0].button}</a>
+                        </li><!-- END .col3 -->
+                        <li class="col3">
+           				     <h2>OR</h2>
+                        </li><!-- END .col3 -->
+                        <li class="col3">
+                            <a class="whiteBtns showPopup condition" href="#popup-play-image-upload" condition='{$conditional[1].button}' >{$conditional[1].button}</a>
+                        </li><!-- END .col3 -->
+                    </ul><!-- END .columns-3 -->
+					{else}
+						 <h1>THERE IS NO WEEK'S DECISION</h1>
+					{/if}
+                </div>
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .dyoshirtPages -->
+</div><!-- END #dyoshirtPages -->
+{include file="application/web/widgets/popup_play_image_upload.html"}
+{include file="application/web/widgets/popup_pose_image_upload.html"}
+
+
+<script>
+	
+	var status = {$status_upload}
+{literal}
+	
+	$(document).ready(function(){
+		if (status==1){
+			
+			$(".contentmyaccount").html(locale.successuploadfotothisorthat);
+			$(".my-account-profile").trigger("click");
+		}
+		
+		if (status==2){
+			$(".contentmyaccount").html(locale.faileduploadfotothisorthat);
+			$(".my-account-profile").trigger("click");
+		}
+		
+	})
+		$(document).on('click','.condition',function(){
+			var buttoncondition = $(this).attr('condition');
+			$('.buttoncondition').html(buttoncondition);			
+		});
+{/literal}		
+</script>
+	

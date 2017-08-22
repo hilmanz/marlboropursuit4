@@ -1,0 +1,29 @@
+<div class="popup">
+	<div class="popupContainer popup-leaderboard" id="popup-leaderboard">
+        <div class="popupContent">
+        	<div class="popup-title">
+				<h1>WORD HUNT - LEADERBOARD</h1>
+                <span class="date">{$smarty.now|date_format:"%A, %B %e, %Y"}</span>
+            </div><!--END .entry-title-->
+        	<div class="entry-popup table_leaderboard">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                	<tr>
+                    	<th colspan="2" class="border-list">Name</th>
+                    	<th width="40" class="center">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{foreach from=$maylead key=k item=v}
+					  <tr>
+						<td width="10" class="red">{$v.no}.&nbsp</td>
+						<td class="red" class="border-list">{$v.name} {$v.last_name}</td>
+						<td class="center red">{$v.totalpoint}</td>
+					  </tr>
+					{/foreach}
+                  </tbody>
+                </table>
+            </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

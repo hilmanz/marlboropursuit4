@@ -1,0 +1,15 @@
+        
+<div class="popup">
+	<div class="popupContainer popupContainer4" id="popup-full-mechanics-maybeninja">
+        <div class="popupContents">
+        	<div class="popup-title">
+				<h1>HOW TO PLAY CROSS OUT MAYBE</h1>
+            </div><!--END .entry-title-->
+        	<div class="entry-popup popupmechanicsGame">
+            	<p>Get rid of the maybe in your life with cross out maybe.</p>
+				<p>Words will randomly appear on the screen. Draw an X on the words that represent a maybe attitude!</p>
+				<p>Earn 2 points if you cross out words that represent a maybe attitude. Get deducted 2 points if you cross out words that represent a decisive attitude.</p>
+          </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->

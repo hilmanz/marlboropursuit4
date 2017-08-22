@@ -1,0 +1,252 @@
+<div class="section">
+	<div class="the-title fl">
+        <h2>USER ACTIVITIES</h2>
+    </div>
+	<form method="GET" action="">
+    <div class="menu_charts">
+            <input type="text"  id="from" name="startdate" value="{$startdate}" ><span>-</span>
+            <input type="text"  id="to" name="enddate" value="{$enddate}" /><a href="javascript:void(0)" class="calendar"></a>
+    </div>
+	</form>
+	<div class="accordion">                           
+        <h3 class=""><span>Number Of Login</span>
+        <a class="icon_arrow expand" href="#">Click to Expand</a>
+        <a class="icon_arrow_grey hide2" href="#">hide</a> </h3>
+        <div class="acc_section">
+            <div class="chart_section" id="numberofUserlogin" ></div>         
+        </div><!--end.acc_section-->
+    </div><!---end.accodrion-->
+    <div class="boxBig">
+    	<div class="title_box">
+            <div class="the-title fl">
+                <h2>Login History</h2>
+            </div>
+			<form method="POST" action="{$basedomain}user_activities" id="bebas" >
+            <div class="select_op rt">
+                <span class="fl sorterBy">Sort by:</span>
+                <div class="styledProvince">                            
+                    <select class="totaltime" name="typeoftime" >
+						<option value="minute" {if $sortby=='minute'} selected{/if}>Minutes</option>
+						<option value="hour" {if $sortby=='hour'} selected{/if}>Hours</option>
+                      
+                    </select>
+                </div>
+             </div>
+			 </form>
+         </div>
+        <div class="chart-section" id="loginHistoryField" >
+			<!-- <img src="{$assets_domain}images/charts3.jpg"> -->
+        </div>
+     </div><!--end.boxBig-->
+     
+     <div class="box-diagram">
+     	<div class="diagram-title">
+        	<h2>Number of Registrant</h2>
+        </div>
+        <div class="diagram-content" id="numregister" >
+        	<!-- <img src="{$assets_domain}images/diagram.png"> -->
+        </div>
+        <div class="diagram-info">
+        	<div class="info-age fl">
+            	<div class="tiny-green-box fl"></div><span class="fl">18-24</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-orange-box fl"></div><span class="fl">25-29</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-grey-box fl"></div><span class="fl">30-above</span>
+            </div>
+        </div><!--end.diagram-info-->
+     </div><!--end.box-diagram-->
+     <div class="box-diagram">
+     	<div class="diagram-title">
+        	<h2>Number of Existing User</h2>
+            <span>that participate</span>
+        </div>
+        <div class="diagram-content" id="existingUserField">
+        	<!-- <img src="{$assets_domain}images/diagram.png"> -->
+        </div>
+        <div class="diagram-info">
+        	<div class="info-age fl">
+            	<div class="tiny-green-box fl"></div><span class="fl">18-24</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-orange-box fl"></div><span class="fl">25-29</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-grey-box fl"></div><span class="fl">30-above</span>
+            </div>
+        </div><!--end.diagram-info-->
+     </div><!--end.box-userStats-->
+     <div class="box-diagram last-box">
+     	<div class="diagram-title">
+        	<h2>Number of New User</h2>
+            <span>that participate</span>
+        </div>
+        <div class="diagram-content" id="numnew">
+        	<!-- <img src="{$assets_domain}images/diagram.png"> -->
+        </div>
+        <div class="diagram-info">
+        	<div class="info-age fl">
+            	<div class="tiny-green-box fl"></div><span class="fl">18-24</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-orange-box fl"></div><span class="fl">25-29</span>
+            </div>
+            <div class="info-age fl">
+            	<div class="tiny-grey-box fl"></div><span class="fl">30-above</span>
+            </div>
+        </div><!--end.diagram-info-->
+     </div><!--end.box-userStats-->
+     
+     <div class="box-diagram">
+     	<div class="diagram-title">
+        	<h2>Male & Female User</h2>
+        </div>
+        <div class="summary_box">
+            	<div class="summary_stats">
+                    <h1 class="brown">{$maleFemaleUser.jumlah_male}</h1>
+                    <h4>Male</h4>
+                </div>
+            </div><!--end>summary_box-->
+            <div class="summary_box center_box">
+            	<div class="summary_center">
+                    <div class="summary_stats">
+                    <h1 class="brown">{$maleFemaleUser.jumlah_female}</h1>
+                        <h4>Female</h4>
+                    </div>
+                </div>
+            </div><!--end>summary_box-->
+     </div><!--.box-diagram-->
+     <div class="third-box">
+     	<div class="title_box">
+            <div class="the-title fl">
+                <h2>Top 100 User (the most letters collected)</h2>
+            </div>
+         </div>
+         <div class="topuser_content">
+         	<div class="table_topuser" usethisclass="" >
+            <table class="gridtable">
+			{section name=i start=0 loop=$mostLetterCollect max=$total } 
+				<tr>
+					<td>{$mostLetterCollect[i].name}</td>
+					<td>{$mostLetterCollect[i].num}</td>
+				</tr>
+			{/section}
+            </table>
+            </div>
+			<div class="table_topuser" usethisclass="" >
+            <table class="gridtable">
+			{section name=i start=$total loop=$mostLetterCollect max=$total } 
+				<tr>
+					<td>{$mostLetterCollect[i].name}</td>
+					<td>{$mostLetterCollect[i].num}</td>
+				</tr>
+			{/section}
+            </table>
+            </div>
+         	<div class="pagination"> 
+				{$paging}
+			</div>
+     </div><!--.third-box
+</div><!--end.section-->
+
+<script type="text/javascript">
+	var numberofLogin = {$numberofLogin|@json_encode};
+	var loginHistory = {$loginHistory|@json_encode};
+	var numberofRegistrant = {$numberofRegistrant|@json_encode};
+	var numberofExistingUser = {$numberofExistingUser|@json_encode};
+	var numberofNewUser = {$numberofNewUser|@json_encode};
+	
+{literal}	
+$(function () {
+
+	var numberLoginData = new Array();
+	var numberLoginDate = new Array();	
+	
+	var logHisData = new Array();
+	var logHisDate = new Array();
+	
+	var numRegisData = new Array();
+	var numRegisDate = new Array();
+	
+	var numExistData = new Array();
+	var numExistDate = new Array();
+	
+	var numNewData = new Array();
+	var numNewDate = new Array();
+
+	for (var numberLogin in numberofLogin){
+		numberLoginData.push(parseInt(numberofLogin[numberLogin].num));
+		numberLoginDate.push(String(numberofLogin[numberLogin].datetime));
+	}
+	
+	for (var logHis in loginHistory){
+		logHisData.push(parseFloat(loginHistory[logHis].num.substr(0,4)));
+		logHisDate.push(String(loginHistory[logHis].date_time));
+	}
+	
+    for (var register in numberofRegistrant){	
+
+			numRegisData.push( [ String(register) , parseInt(numberofRegistrant[register]) ] ); 	
+		}
+		
+	for (var existingUser in numberofExistingUser){	
+
+			numExistData.push( [ String(existingUser) , parseInt(numberofExistingUser[existingUser]) ] ); 	
+		}
+	
+	for (var ofnewUser in numberofNewUser){	
+
+			numNewData.push( [ String(ofnewUser) , parseInt(numberofNewUser[ofnewUser]) ] ); 	
+		}
+		
+	gethighChart('column','test  Chart','numberofUserlogin',numberLoginData,numberLoginDate,1,true);
+	gethighChart('line','test  Chart','loginHistoryField',logHisData,logHisDate,1,true);
+	gethighChart('pie','test  Chart','numregister',numRegisData,numRegisDate,1,true,false,false,false,'numeric');
+	gethighChart('pie','test  Chart','existingUserField',numExistData,numExistDate,1,true,false,false,false,'numeric');
+	gethighChart('pie','test  Chart','numnew',numNewData,numNewDate,1,true,false,false,false,'numeric');
+	
+	//drillDownChart('column','test Chart','cont',dataCoba,cateActivityGroup,1 ,false);
+	});
+	
+		
+	$(document).on('click', '.calendar', function(){
+		var from = $('#from').val();
+		var to = $('#to').val();
+		
+		window.location.href='?startdate='+from+'&enddate='+to;
+	
+	})	
+	
+	$(document).on('change', '.totaltime', function(){
+	
+		$("#bebas").submit();
+		
+	})	
+	
+	/*
+	$(document).on('change', '.totaltime', function(){
+		var typeoftime = $(this).val();
+		
+		var logHisData = new Array();
+		var logHisDate = new Array();
+	
+		$.post(basedomain+'user_activities/ajax', {typeoftime:typeoftime}, function(data){
+			
+			var loginHistory = data.data;
+			
+			for (var logHis in loginHistory){
+				logHisData.push(parseInt(loginHistory[logHis].num));
+				logHisDate.push(String(loginHistory[logHis].date_time));
+			}
+			
+			gethighChart('line','test  Chart','loginHistoryField',logHisData,logHisDate,1,true);
+			
+		}, "JSON")
+		//window.location.href='?startdate='+from+'&enddate='+to;
+		
+	})*/
+		
+</script>
+{/literal}

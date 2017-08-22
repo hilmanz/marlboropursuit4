@@ -1,0 +1,59 @@
+<div id="gamesPage">
+	<div class="gamesPage">
+        <ul class="columns-2 clearfix">
+        	
+            <li class="col2">
+            	<div class="boxPaper">
+                    <div class="thumbGame">
+                    	<a href="{$basedomain}games/wallbreaker/1"><img src="{$basedomain}assets/content/thumb_game1.jpg" /></a>
+                    </div><!-- END .thumbGame -->
+                    <div class="captions">
+                        <h1>WALLBREAKER</h1>
+                        <h4>Get rid of your MAYBE<br />with WALLBREAKER</h4>
+                        <a class="readmore" href="{$basedomain}games/wallbreaker">WALLBREAKER</a>
+                    </div><!-- END .captions -->
+                </div><!-- END .boxPaper -->
+            </li>
+            
+            <li class="col2">
+            	<div class="boxPaper">
+                    <div class="thumbGame">
+                    	<a href="{$basedomain}games/crossout/2"><img src="{$basedomain}assets/content/thumb_game2.jpg" /></a>
+                    </div><!-- END .thumbGame -->
+                    <div class="captions">
+                        <h1>CROSS OUT</h1>
+                        <h4>Get rid of the MAYBE in your life<br />with CROSS OUT</h4>
+                        <a class="readmore" href="{$basedomain}games/crossout">CROSS OUT</a>
+                    </div><!-- END .captions -->
+                </div><!-- END .boxPaper -->
+            </li>
+			
+			  <li class="col2">
+            	<div class="boxPaper">
+                    <div class="thumbGame">
+                    	<a href="{$basedomain}games/wordhunt/4"><img src="{$basedomain}assets/content/thumb_game3.jpg" /></a>
+                    </div><!-- END .thumbGame -->
+                    <div class="captions">
+                        <h1>WORD HUNT</h1>
+                        <h4>Cross out words that hinder you </br> from making a decision in Word Hunt</h4>
+                        <a class="readmore" href="{$basedomain}games/wordhunt">WORD HUNT</a>
+                    </div><!-- END .captions -->
+                </div><!-- END .boxPaper -->
+            </li>
+			
+			  <li class="col2">
+            	<div class="boxPaper">
+                    <div class="thumbGame">
+                    	<a href="{$basedomain}games/doubtcrasher/5"><img src="{$basedomain}assets/content/thumb_game4.jpg" /></a>
+                    </div><!-- END .thumbGame -->
+                    <div class="captions">
+                        <h1>DOUBT CRASHER</h1>
+                        <h4>Get rid of the MAYBE in your life<br />with DOUBT CRASHER</h4>
+                        <a class="readmore" href="{$basedomain}games/doubtcrasher">DOUBT CRASHER</a>
+                    </div><!-- END .captions -->
+                </div><!-- END .boxPaper -->
+            </li>
+			
+        </ul>
+    </div><!-- END .gamesPage -->
+</div><!-- END #gamesPage -->

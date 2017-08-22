@@ -1,0 +1,245 @@
+<div id="landing-page" class="section2">
+	<div class="landing-page">
+        <ul class="columns-content clearfix">
+            <li class="col-sidebar">
+                <div class="sideBar">
+                    <div class="entry landingEntry">
+                    	<h2>in making life decisions, Only two options can <br />move
+                        	you forward - Yes or No. <span class="red">Maybe</span> never can</h2>
+                    </div><!-- END .entry -->
+                    <div class="be-marlboro2"></div>
+                    <a href="{$basedomain}news/landing" class="readmore rback">Back</a>
+                </div><!-- END .sideBar -->
+            </li><!-- END .col-sidebar -->
+            <li class="col-main">
+            	<div class="section-detail">
+                    <ul class="columns-2 clearfix">
+                        <li class="col2">
+                        	<div class="widget-container news-widget">
+                            	<div class="widget-title">
+                                	<h3>Past Event</h3>
+                                </div><!-- END .widget-title -->
+                                <div class="widget-content">
+                                	{$event_past_list}
+                                </div><!-- END .widget-content -->
+                            </div><!-- END .widget-container -->
+                        </li><!-- END .col2 -->
+                        <li class="col2">
+                        	
+							<div id="event-gallery" class="">{if $detailevent}
+								
+								
+								{if $photo}
+								<div class="perspective contentGalery" id="frameGalleryEvent">
+									
+									{foreach from=$detailevent key=evnentkey item=eventdata}
+										{if $eventdata.gallery_paging}
+										{foreach from=$eventdata.gallery_paging key=k item=v}
+										
+										<div class="perspective_diap galeryEvent" total="{$eventdata.total}" startpage="0">
+											{if $v.files}
+											<img src="{$basedomain}public_assets/gallery/{$v.files}" alt="image" />
+											{/if}
+											<p class="caption-event">
+												<span class="entry-caption">
+													<span class="title-photo">{$detailevent[$evnentkey].title}</span>
+													<span class="date-event">{$v.date}</span>
+													<span class="venue-event">{$v.content}</span>
+												</span><!-- END .entry-caption -->
+											</p><!-- END .caption -->
+										</div><!-- END .perspective_diap -->
+										 {/foreach}
+										{/if}
+								   {/foreach}
+								   
+								</div><!-- END .perspective -->
+								<div class="gallery-act">
+									<div class="paging fr">
+										<a class="prev prevgallery" href="javascript:void(0)">PREV</a>
+										<a class="next nextgallery" href="javascript:void(0)">NEXT</a>
+									</div><!-- END .paging -->
+								</div><!-- END .gallery-act -->
+								{elseif $video}
+									{foreach from=$detailevent key=evnentkey item=eventdata}
+										
+										{if $eventdata.gallery}
+										{foreach from=$eventdata.gallery key=k item=v}
+											{if $v.typealbum ==3}
+												<div class='galeryEvent'>
+													<div id='video-box' class='video-labor-content' >
+														<video id='video-labor' class='video-js vjs-default-skin' controls='controls' preload='none' width='100%' height='305px' poster='{$basedomain}public_assets/gallery/{$v.thumbnail}' data-setup=''  >
+															<source src='{$basedomain}public_assets/gallery/{$v.files}' type='video/mp4' />
+															<source src='{$basedomain}assets/video/labor-teaser.ogg' type='video/ogg' />
+														</video>
+													</div>
+												</div>
+											{/if}
+										{/foreach}
+										{/if}
+									{/foreach}
+										
+								
+								{/if}
+								
+								
+								{/if}
+							</div><!-- END #event-gallery -->
+                        </li><!-- END .col2 -->
+                    </ul><!-- END .columns-2 -->
+                </div><!-- END .section-detail -->
+            </li><!-- END .col-main -->
+        </ul>
+    </div><!-- END .landingPage -->
+</div><!-- END #landingPage -->
+{$popup_game}
+
+<script>
+
+{literal}
+	$(document).on('click','.nextgallery',function(){
+			var start = parseInt($(".galeryEvent").attr("startpage"))+5;
+			var totalGalery = parseInt($(".galeryEvent").attr("total"));
+			
+			//$(".eventFoto").click(function(){
+				var galeryID = parseInt($(".eventFoto").attr('prop'));
+				if (galeryID){
+					typeGalery = 2;
+				}else{
+					typeGalery = 3;
+				}
+			
+			var id = parseInt($(".idEvent").val());
+			var end = start+4;
+			if(start < totalGalery){
+				
+				$.post(basedomain+'event/ajaxgallery',{start:start,end:end, type:typeGalery, id:id},function(data){
+					if(data.status == true){
+						var gallerydata = data.rec[0].gallery_paging;
+					
+						var html ="";
+						$.each(gallerydata,function(i,e){
+							html +="<div class='perspective_diap galeryEvent' total='"+data.rec[0].total+"' startpage='"+end+"'>";
+							html +="             <img src='"+basedomain+"public_assets/gallery/"+e.files+"' alt='image' />";
+							html += "<p class='caption-event'>";
+							html += "<span class='entry-caption'>";
+							html += "<span class='title-photo'>"+e.title+"</span>";
+							html += "<span class='venue-event'>"+e.content+"</span>";
+							html += "</span>";
+							html += "</p>";
+							html +="</div>";
+						});
+						
+						//html += galleryviews(gallerydata);
+						
+						$(".contentGalery").html(html);
+						$(".galeryEvent").attr("startpage",start);
+						
+						if (data.rec[0].total){
+							$('.perspective').perspective({
+								scrollingSpeed : 8000,
+								slidingSpeed : 400,
+								depth :60,
+								flightPoint : 'top',
+								hoverGap : 5,
+								maxDarkening : 1,
+								timerPers : 'hide',
+								playPers : 'hide'
+							});
+						}
+						
+					}
+				},"JSON");
+			}
+			
+	});
+	
+	$(document).on('click','.prevgallery',function(){
+			var start = parseInt($(".galeryEvent").attr("startpage"))-5;
+			var totalGalery = parseInt($(".galeryEvent").attr("total"));
+			
+			var eventFoto = $(".eventFoto").attr("prop");
+			if (eventFoto){
+				var typeGalery = 2;
+			}
+			var eventVideo = $(".eventVideo").attr("prop");
+			if (eventVideo){
+				var typeGalery = 3;
+			}
+			
+			if (!typeGalery) typeGalery = 2;
+			var typeGalery = 2;
+			var id = parseInt($(".idEvent").val());
+			var end = start+4;
+			
+			if(start>=0){
+				$.post(basedomain+'event/ajaxgallery',{start:start,end:end, type:typeGalery,id:id},function(data){
+					if(data.status ==true){
+						var gallerydata = data.rec[0].gallery_paging;
+						var html ="";
+						$.each(gallerydata,function(i,e){
+							html +="<div class='perspective_diap galeryEvent' total='"+data.rec[0].total+"' startpage='"+end+"'>";
+							html +="<img src='"+basedomain+"public_assets/gallery/"+e.files+"' alt='image' />";
+							html += "<p class='caption-event'>";
+							html += "<span class='entry-caption'>";
+							html += "<span class='title-photo'>"+e.title+"</span>";
+							html += "<span class='venue-event'>"+e.content+"</span>";
+							html += "</span>";
+							html += "</p>";
+							html +="</div>";
+						});
+						
+						$(".contentGalery").html(html);
+						$(".galeryEvent").attr("startpage",start);
+						
+						if (data.rec[0].total > 1){
+							$('.perspective').perspective({
+								scrollingSpeed : 8000,
+								slidingSpeed : 400,
+								depth :60,
+								flightPoint : 'top',
+								hoverGap : 5,
+								maxDarkening : 1,
+								timerPers : 'hide',
+								playPers : 'hide'
+							});
+						}
+						
+						
+					}
+				},"JSON");
+			}
+			
+	});	
+	
+	
+	function setType(type)
+	{
+		if (type == 2){
+			return 2;
+		}else{
+			return 3;
+		}
+	}
+	function galleryviews(data){
+		var html ="";
+		
+		$.each(data,function(i,e){
+					html +="<div class='perspective_diap' galeryEvent' total='{$eventdata.total}' startpage='0'>";
+					html +="             <img src='"+basedomain+"public_assets/gallery/"+e.files+"' alt='image' />";
+					html += "<p class='caption-event'>";
+					html += "<span class='entry-caption'>";
+					html += "<span class='title-photo'>"+e.title+"</span>";
+					html += "<span class='venue-event'>"+e.content+"</span>";
+					html += "</span>";
+					html += "</p>";
+					html +="</div>";
+		
+		});
+		
+		return html;
+		
+	}
+	
+	
+{/literal}
+</script>

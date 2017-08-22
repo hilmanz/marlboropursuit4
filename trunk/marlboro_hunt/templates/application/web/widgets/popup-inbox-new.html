@@ -1,0 +1,82 @@
+<div class="popup">
+	<div class="popupContainer popupContainer4" id="popup-inbox-new">
+        <div class="popupContent">
+        	<div class="entry-popup popupInbox">
+            	<h1 class="titleinbox">Messages</h1>
+                <div class="inner">
+                         <ul class="columns-2 clearfix">
+                         	<li class="inbox-widget">
+                            	<div class="widget-container inbox-action">
+                                	<!--<a href="javascript:void(0)" class="btn_red composeMessage ">Compose Message</a>-->
+                                	<div class="sub-row framelistinbox">
+                                    	<a class="inbox-but inboxbutton"href="javascript:void(0)">Inbox<span class="notifinbox"></span></a>
+                                    	
+										<!--<a class="inbox-but sentbutton" href="javascript:void(0)">Sent</a>-->
+                                        <a class="inbox-but trashbutton" href="javascript:void(0)">Trash</a>
+                                    </div>
+                                </div>
+                            </li><!-- END .inbox-widget -->
+                            <li class="col2 isi-inbox">
+                            	<div id="list-inbox" class="listinbox">
+
+                                    <div class="table-inbox listmessageinbox">
+                                        <!--Content message -->
+                                    </div> <!--END.table-inbox-->
+                                    <div class="actionInbox">
+											
+                                            <div class="checkAll-Action fl">
+                                                <a class="selectAll selectAllMessage" href="javascript:void(0)">Select All</a>
+                                                <a class="deletetAll deletetAllMessage" href="javascript:void(0)">Delete Selected</a>
+                                            </div>
+                                            <div class="pageInbox fr pagingInboxMessage">
+                                                <!--Content paging -->
+                                            </div>
+                                      </div><!-- END .actionInbox-->
+                                </div><!-- END #list-inbox-->
+                                <div id="isi-message" class="contentMessageInbox">
+									
+                                </div><!-- END #isi-message-->
+                            </li><!-- END .columns-2 clearfix -->
+                         </ul><!-- END .columns-2 clearfix -->
+                </div><!-- END .inner -->
+            </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
+{literal}
+<script type="text/javascript">
+/*
+function altRows(id){
+	if(document.getElementsByTagName){  
+		
+		var table = document.getElementById(id);  
+		var rows = table.getElementsByTagName("tr"); 
+		 
+		for(i = 0; i < rows.length; i++){          
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}      
+		}
+	}
+}
+window.onload=function(){
+	altRows('alternatecolor');
+}
+*/
+
+$( document ).ready(function() {
+	$(".backinbox").click(function(event){
+		event.preventDefault();
+	  $("#isi-message").hide();	  
+	  $("#list-inbox").show();
+	});
+	
+	$(".deletetAll").click(function (event) {
+		event.preventDefault();
+		$('.check-inbox').removeAttr("checked");
+	});
+});
+</script>
+{/literal}

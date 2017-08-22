@@ -1,0 +1,12 @@
+
+<div class="popup">
+    <div class="popupContainer" id="popup-full-mechanics-pursuit" style="width:450px;">
+        <div class="popupContent">
+            <div class="entry-popup" style="text-shadow:0 1px 1px #eee;min-height: 76px;">       
+                <h1 style="font-size:18px; line-height:35px; margin:0;">Ready for another letter?</h1>
+                <h4 style="font-size:18px; line-height:35px; margin:0;">Visit <a href="{$basedomain}pursuit/join">The Pursuit page</a> to find out where to go this weekend. </h4>
+                <h1 style="font-size:18px; line-height:35px; margin:0;">See you there!</h1>
+            </div><!--END .entry-popup-->
+        </div><!-- END .popupContent -->
+    </div><!-- END .popupContainer -->
+</div><!-- END .popup -->
